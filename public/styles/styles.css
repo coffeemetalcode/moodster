@@ -1,3 +1,130 @@
 .list-group-item {
   line-height: 2.5;
 }
+
+/* Custom Stylesheet */
+/**
+ * Use this file to override Materialize files so you can update
+ * the core Materialize files in the future
+ *
+ * Made By MaterializeCSS.com
+ */
+
+ .icon-block {
+  padding: 0 15px;
+}
+.icon-block .material-icons {
+  font-size: inherit;
+}
+
+/* Sticky Footer -- this doesn't seem to do anything. */
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+/* Alter this and remove the first dot to activate */
+.page-footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Media Queries - I started with the file at the end of this github link: https://gist.github.com/gokulkrishh/242e68d1ee94ad05f488#file-media-query-css */
+
+/* 
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
+*/
+
+@media (min-width: 1281px) {
+  /* //CSS */
+  body {
+    color: orange; 
+    font-size: 155%;
+  }
+  #donutchart, #combochart {
+    width: 1266px;
+  }
+}
+
+/* 
+  ##Device = Laptops, Desktops
+  ##Screen = B/w 1025px to 1280px
+*/
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+  /* //CSS */
+  body {
+    color: green; 
+    font-size: 135%;
+  }
+  #donutchart, #combochart {
+    width: 1010px;
+  }
+}
+
+/* 
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  /* //CSS */
+}
+
+/* 
+  ##Device = Tablets, Ipads (landscape)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  /* //CSS */
+  body {
+    color: blue; /* comment out later */
+    font-size: 145%;
+  }
+  #donutchart, #combochart {
+    width: 753px;
+  }
+}
+
+/* 
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+
+@media (min-width: 481px) and (max-width: 767px) {
+  /* //CSS */
+  body {
+    color: blue; /* comment out later */
+    font-size: 145%;
+  }
+  #donutchart, #combochart {
+    width: 466px;
+  }
+}
+
+/* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+  /* //CSS */
+  body {
+    color: red; /* comment out later */
+    font-size: 138%;
+  }
+
+  #donutchart, #combochart {
+    width: 300px;
+  }
+}
