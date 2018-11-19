@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1.0"
+    />
+    <title>Moodster in Materialize CSS</title>
+
+    <!-- CSS -->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      href="public/styles/materialize.css"
+      type="text/css"
+      rel="stylesheet"
+      media="screen,projection"
+    />
+    <link
+      href="public/styles/styles.css"
+      type="text/css"
+      rel="stylesheet"
+      media="screen,projection"
+    />
+    <script
+      type="text/javascript"
+      src="https://www.gstatic.com/charts/loader.js"
+    ></script>
+    <script type="text/javascript">
+      google.charts.load("current", { packages: ["corechart"] });
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ["Mood", "Total"],
+          ["Glad", 6],
+          ["Sad", 4],
+          ["Mad", 1],
+          ["Afrad", 4]
+        ]);
+
+        var options = {
+          title: "Moods",
+          pieHole: 0.4
+        };
+
+        var chart = new google.visualization.PieChart(
+          document.getElementById("donutchart")
+        );
+        chart.draw(data, options);
+      }
+    </script>
+    <script>
+      function drawVisualization() {
+        // Some raw data (not necessarily accurate)
+        var data = google.visualization.arrayToDataTable([
+          ["Month", "Glad", "Sad", "Mad", "Afrad"],
+          // ['January', 15, 4, 2, 2],
+          // ['February', 15, 4, 2, 2],
+          // ['April', 12, 1, 4, 5],
+          // ['May', 15, 4, 2, 2],
+          // ['June', 12, 1, 4, 5],
+          // ['July', 12, 1, 4, 5],
+          ["August", 15, 4, 2, 2],
+          ["September", 12, 1, 4, 5],
+          ["October", 15, 4, 2, 2],
+          ["November", 12, 1, 4, 5],
+          ["December", 15, 4, 2, 2]
+        ]);
+
+        var options = {
+          title: "Monthly Mood and Sleep Quality Chart",
+          vAxis: {
+            title: "Moods"
+          },
+          hAxis: {
+            title: "Months"
+          },
+          seriesType: "bars",
+          series: {
+            5: {
+              type: "line"
+            }
+          }
+        };
+
+        var chart = new google.visualization.ComboChart(
+          document.getElementById("combochart")
+        );
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+  <body>
+    <header>
+      <div class="navbar-fixed">
+        <nav class="light-blue lighten-1" role="navigation">
+          <div class="nav-wrapper container">
+            <a id="logo-container" href="#" class="brand-logo">Moodster</a>
+            <ul class="right hide-on-med-and-down">
+              <li><a href="#">Sign up</a></li>
+            </ul>
+
+            <ul id="nav-mobile" class="sidenav">
+              <li><a href="#">Sign up</a></li>
+              <li><a href="#">Our code</a></li>
+              <li><a href="#">Previous projects</a></li>
+            </ul>
+            <a href="#" data-target="nav-mobile" class="sidenav-trigger"
+              ><i class="material-icons">menu</i></a
+            >
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <div class="section no-pad-bot" id="index-banner">
+        <div class="container">
+          <div class="row center">
+            <h5 class="header col s12 light">
+              A mobile-friendly Mood tracking application
+            </h5>
+          </div>
+          <div class="row center">
+            <a
+              href=""
+              id="download-button"
+              class="btn-large waves-effect waves-light orange"
+              >How are you feeling?</a
+            >
+          </div>
+          <div class="input-field col s6">
+            <i class="material-icons prefix">account_circle</i>
+            <input
+              placeholder="Username"
+              id="username"
+              type="text"
+              class="validate"
+            />
+            <button
+              class="btn waves-effect waves-light"
+              type="submit"
+              name="action"
+            >
+              See Your Profile <i class="material-icons right">send</i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="section">
+          <!-- Icon Section -->
+          <div class="row">
+            <div class="col s12 m12 l6">
+              <div class="icon-block">
+                <h2 class="center light-blue-text">
+                  <i class="material-icons">insert_chart</i>
+                </h2>
+                <h5 class="center">Bar Chart</h5>
+                <div id="combochart"></div>
+                <p class="light">
+                  "Excepteur sint occaecat cupidatat non proident, sunt in culpa
+                  qui officia sunt in culpa qui officia sunt in culpa qui
+                  officia.
+                </p>
+              </div>
+            </div>
+
+            <div class="col s12 m12 l6">
+              <div class="icon-block">
+                <h2 class="center light-blue-text">
+                  <i class="material-icons">pie_chart</i>
+                </h2>
+                <h5 class="center">Pie Chart</h5>
+                <div id="donutchart"></div>
+                <p class="light">
+                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut . Duis aute irure dolor in
+                  reprehenderit.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <br /><br />
+      </div>
+    </main>
+
+    <footer class="page-footer blue">
+      <div class="row">
+        <div class="container">© 2018 Moodster</div>
+        <!-- <div class="footer-copyright purple"></div> -->
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="public/js/materialize.js"></script>
+    <script src="public/js/init.js"></script>
+  </body>
+</html>
