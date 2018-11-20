@@ -18,7 +18,7 @@
 
 /* Sticky Footer -- this doesn't seem to do anything. */
 
-body {
+body, p {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
@@ -28,7 +28,6 @@ main {
   flex: 1 0 auto;
 }
 
-/* Alter this and remove the first dot to activate */
 .page-footer {
   position: fixed;
   left: 0;
@@ -45,7 +44,7 @@ main {
 
 @media (min-width: 1281px) {
   /* //CSS */
-  body {
+  body, p {
     color: orange; 
     font-size: 155%;
   }
@@ -61,7 +60,7 @@ main {
 
 @media (min-width: 1025px) and (max-width: 1280px) {
   /* //CSS */
-  body {
+  body, p {
     color: green; 
     font-size: 135%;
   }
@@ -86,7 +85,7 @@ main {
 
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
   /* //CSS */
-  body {
+  body, p {
     color: blue; /* comment out later */
     font-size: 145%;
   }
@@ -102,7 +101,7 @@ main {
 
 @media (min-width: 481px) and (max-width: 767px) {
   /* //CSS */
-  body {
+  body, p {
     color: blue; /* comment out later */
     font-size: 145%;
   }
@@ -118,7 +117,7 @@ main {
 
 @media (min-width: 320px) and (max-width: 480px) {
   /* //CSS */
-  body {
+  body, p {
     color: red; /* comment out later */
     font-size: 138%;
   }
