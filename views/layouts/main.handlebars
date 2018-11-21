@@ -3,13 +3,187 @@
 
 <head>
   <meta charset="utf-8">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css">
-  <link rel="stylesheet" href="/styles/styles.css" media="screen" title="no title" charset="utf-8">
-  <title>Home Page</title>
+  <title>Moodster</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <link href="/styles/materialize.css" type="text/css" rel="stylesheet" />
+  <link href="/styles/style.css" type="text/css" rel="stylesheet" />
 </head>
 
+<style>
+  /* Custom Stylesheet */
+  /**
+ * Use this file to override Materialize files so you can update
+ * the core Materialize files in the future
+ *
+ * Made By MaterializeCSS.com
+ */
+
+  .icon-block {
+    padding: 0 15px;
+  }
+
+  .icon-block .material-icons {
+    font-size: inherit;
+  }
+
+  /* Sticky Footer -- this doesn't seem to do anything. */
+
+  body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+
+  main {
+    flex: 1 0 auto;
+  }
+
+  .page-footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+  }
+
+  /* Media Queries - I started with the file at the end of this github link: https://gist.github.com/gokulkrishh/242e68d1ee94ad05f488#file-media-query-css */
+
+  /* 
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
+*/
+
+  @media (min-width: 1281px) {
+
+    /* //CSS */
+    body {
+      color: orange;
+      font-size: 155%;
+    }
+
+    #donutchart,
+    #combochart {
+      width: 1266px;
+    }
+  }
+
+  /* 
+  ##Device = Laptops, Desktops
+  ##Screen = B/w 1025px to 1280px
+*/
+
+  @media (min-width: 1025px) and (max-width: 1280px) {
+
+    /* //CSS */
+    body {
+      color: green;
+      font-size: 135%;
+    }
+
+    #donutchart,
+    #combochart {
+      width: 1010px;
+    }
+  }
+
+  /* 
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+
+  @media (min-width: 768px) and (max-width: 1024px) {
+    /* //CSS */
+  }
+
+  /* 
+  ##Device = Tablets, Ipads (landscape)
+  ##Screen = B/w 768px to 1024px
+*/
+
+  @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+
+    /* //CSS */
+    body {
+      color: blue;
+      /* comment out later */
+      font-size: 145%;
+    }
+
+    #donutchart,
+    #combochart {
+      width: 753px;
+    }
+  }
+
+  /* 
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+
+  @media (min-width: 481px) and (max-width: 767px) {
+
+    /* //CSS */
+    body {
+      color: blue;
+      /* comment out later */
+      font-size: 145%;
+    }
+
+    #donutchart,
+    #combochart {
+      width: 466px;
+    }
+  }
+
+  /* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+  @media (min-width: 320px) and (max-width: 480px) {
+
+    /* //CSS */
+    body {
+      color: red;
+      /* comment out later */
+      font-size: 138%;
+    }
+
+    #donutchart,
+    #combochart {
+      width: 300px;
+    }
+  }
+</style>
+
 <body>
+  <header>
+    <div class="navbar-fixed">
+      <nav class="light-blue lighten-1" role="navigation">
+        <div class="nav-wrapper container">
+          <a id="logo-container" href="#" class="brand-logo">Moodster</a>
+          <ul class="right hide-on-med-and-down">
+            <li><a href="#">Sign up</a></li>
+          </ul>
+
+          <ul id="nav-mobile" class="sidenav">
+            <li><a href="#">Sign up</a></li>
+            <li><a href="#">Our code</a></li>
+            <li><a href="#">Previous projects</a></li>
+          </ul>
+          <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
   {{{body}}}
+
+  <footer class="page-footer blue">
+    <div class="row">
+      <div class="container">© 2018 Moodster</div>
+      <!-- <div class="footer-copyright purple"></div> -->
+    </div>
+  </footer>
 </body>
 
 </html>
