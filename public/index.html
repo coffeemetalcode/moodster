@@ -10,17 +10,21 @@
 
     <!-- CSS -->
     <link
+      href="styles/reset.css"
+      rel="stylesheet"
+    />
+    <link
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
     />
     <link
-      href="public/styles/materialize.css"
+      href="styles/materialize.css"
       type="text/css"
       rel="stylesheet"
       media="screen,projection"
     />
     <link
-      href="public/styles/styles.css"
+      href="styles/styles.css"
       type="text/css"
       rel="stylesheet"
       media="screen,projection"
@@ -54,7 +58,7 @@
         <div class="container">
           <div class="row center">
             <h5 class="header col s12 light">
-              Enter Personal Details
+              A Mobile-Friendly Mood Tracker
             </h5>
           </div>
 
@@ -66,27 +70,23 @@
               type="text"
               class="validate"
             />
-            <!-- <i class="material-icons prefix">face</i> -->
-            <input
-              placeholder="Full Name"
-              id="name"
-              type="text"
-              class="validate"
-            />
-            <!-- <i class="material-icons prefix">phone_android</i> -->
-            <input
-              placeholder="Mobile"
-              id="mobile"
-              type="text"
-              class="validate"
-            />
             <button
               class="btn waves-effect waves-light"
               type="submit"
-              name="Submit"
+              name="action"
             >
-              Submit <i class="material-icons right">send</i>
+              Create an Entry <i class="material-icons right">send</i>
             </button>
+             or 
+            <button
+              class="btn waves-effect waves-light"
+              type="submit"
+              name="action"
+            >
+              View Your Profile <i class="material-icons right">send</i>
+            </button>
+             or 
+            <a href="#">Sign Up</a>
           </div>
         </div>
       </div>
@@ -101,7 +101,7 @@
 
     <!-- Scripts -->
     <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <script src="public/js/materialize.js"></script>
-    <script src="public/js/init.js"></script>
+    <script src="js/materialize.js"></script>
+    <script src="js/init.js"></script>
   </body>
 </html>
