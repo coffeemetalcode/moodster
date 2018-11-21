@@ -10,17 +10,21 @@
 
     <!-- CSS -->
     <link
+      href="styles/reset.css"
+      rel="stylesheet"
+    />
+    <link
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
     />
     <link
-      href="public/styles/materialize.css"
+      href="styles/materialize.css"
       type="text/css"
       rel="stylesheet"
       media="screen,projection"
     />
     <link
-      href="public/styles/styles.css"
+      href="styles/styles.css"
       type="text/css"
       rel="stylesheet"
       media="screen,projection"
@@ -48,7 +52,6 @@
         </nav>
       </div>
     </header>
-    Any TAs in the house who like Handlebars want to help troubleshoot a 
     <main>
       <div class="section no-pad-bot" id="index-banner">
         <div class="container">
@@ -79,7 +82,7 @@
           <div class="input-field col s6">
             <p>How do you rate your current mood?</p>
             <select class="form-control" id="moodRating">
-              <option value=""></option>
+              <option value="" disabled selected>Mood Rating</option>
               <option value="1">1 (Bad)</option>
               <option value="2">2 (Okay)</option>
               <option value="3">3 (Good)</option>
@@ -91,7 +94,7 @@
           <div class="input-field col s6">
             <p>Select your current mood from the list.</p>
             <select class="form-control" id="moodType">
-              <option value=""></option>
+              <option value="" disable selected>Current Mood</option>
               <option value="1">Glad</option>
               <option value="2">Sad</option>
               <option value="3">Mad</option>
@@ -102,7 +105,7 @@
           <div class="input-field col s6">
             <p>How do you rate your current diet?</p>
             <select class="form-control" id="moodRating">
-              <option value=""></option>
+              <option value="" disabled selected>Current Diet</option>
               <option value="1">1 (Bad)</option>
               <option value="2">2 (Okay)</option>
               <option value="3">3 (Good)</option>
@@ -114,7 +117,7 @@
           <div class="input-field col s6">
             <p>How stressed do you feel at the moment?</p>
             <select class="form-control" id="moodRating">
-              <option value=""></option>
+              <option value="" disabled selected>Current Stress</option>
               <option value="1">Very stressed</option>
               <option value="2">Somewhat stressed</option>
               <option value="3">Neutral</option>
@@ -143,8 +146,8 @@
 
     <!-- Scripts -->
     <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <script src="public/js/materialize.js"></script>
-    <script src="public/js/init.js"></script>
+    <script src="js/materialize.js"></script>
+    <script src="js/init.js"></script>
     <script>
       $(document).ready(function() {
         $("select").formSelect();
