@@ -9,7 +9,7 @@ if (process.env.JAWSDB_URL) {
     port: process.env.PORT || 3306,
     user: "rwdakged7dmbfzp8",
     password: "vvoihbv5mon1mx36",
-    database: "moodster_db",
+    database: "vyechzguoac7v66k",
     use_env_variable: "JAWS_DB_URL"
   });
 };
