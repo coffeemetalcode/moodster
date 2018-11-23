@@ -1,11 +1,11 @@
 var db = require("../models");
+
 module.exports = function (app) {
   // Get all users
   app.get("/api/user", function (req, res) {
     db.User.findAll({})
       .then(function (dbUsers) {
         res.json(dbUsers);
-        console.log(dbUsers);
       });
   });
   //Get one user by id
@@ -32,9 +32,6 @@ module.exports = function (app) {
       });
   });
 
-};
-
-module.exports = function (app) {
   // Get all check-ins
   app.get("/api/checkin", function (req, res) {
     db.CheckIn.findAll({})
