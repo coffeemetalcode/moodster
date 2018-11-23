@@ -1,3 +1,8 @@
+require('dotenv').config();
+var keys = require('./keys.js');
+const jawsUser = keys.jawsdb.user;
+const jawsPassword = keys.jawsdb.password;
+
 var mysql = require("mysql");
 var connection;
 
@@ -7,8 +12,8 @@ if (process.env.JAWSDB_URL) {
   connection = mysql.createConnection({
     host: "localhost",
     port: process.env.PORT || 3306,
-    user: "rwdakged7dmbfzp8",
-    password: "vvoihbv5mon1mx36",
+    user: jawsUser,
+    password: jawsPassword,
     database: "vyechzguoac7v66k",
     use_env_variable: "JAWS_DB_URL"
   });
