@@ -1,0 +1,18 @@
+
+
+{
+    "user_id":1,
+    "user_name":"renizzle",
+    "person_name":"Renee",
+    "phone_number": 6037851885,
+}
+{
+    "user_id":1,
+    "sleep_quality":4,
+    "sleep_amount":8,
+    "mood_rating": 5,
+    "mood_type": 1,
+    "diet_quality": 5,
+    "stress_level": 2,
+    "user_entry": "Super rad day! I ate three pepperoni pizzas and slept like a newborn baby!"
+}
