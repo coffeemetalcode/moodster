@@ -20,7 +20,6 @@
 
 body, p {
   display: flex;
-  min-height: 100vh;
   flex-direction: column;
 }
 
@@ -33,6 +32,7 @@ main {
   left: 0;
   bottom: 0;
   width: 100%;
+  z-index: 1;
 }
 
 /* Media Queries - I started with the file at the end of this github link: https://gist.github.com/gokulkrishh/242e68d1ee94ad05f488#file-media-query-css */
