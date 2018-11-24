@@ -23,12 +23,13 @@ $("#add-btn").on("click", function(event) {
         console.log(data);
         // tell the user we're adding a user with an alert window
         alert("Adding user...");
+        window.location.href = "/entry";
       });
   
     // empty each input box by replacing the value with an empty string
     $("#username").val("");
     $("#name").val("");
     $("#mobile").val("");
-  
+
   });
   
