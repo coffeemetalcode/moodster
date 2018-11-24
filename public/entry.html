@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
+  <title>Moodster Home</title>
+
+  <!-- CSS -->
+  <link href="styles/reset.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <link href="styles/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
+  <link href="styles/styles.css" type="text/css" rel="stylesheet" media="screen,projection" />
+</head>
+
+<body>
+  <header>
+    <div class="navbar-fixed">
+      <nav class="light-blue lighten-1" role="navigation">
+        <div class="nav-wrapper container">
+          <a id="logo-container" href="#" class="brand-logo">Moodster</a>
+          <ul class="right hide-on-med-and-down">
+            <li><a href="#">Sign up</a></li>
+          </ul>
+
+          <ul id="nav-mobile" class="sidenav">
+            <li><a href="#">Sign up</a></li>
+            <li><a href="#">Our code</a></li>
+            <li><a href="#">Previous projects</a></li>
+          </ul>
+          <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <div class="section no-pad-bot" id="index-banner">
+      <div class="container">
+        <div class="row center">
+          <h5 class="header col s12 light">How are you feeling today?</h5>
+        </div>
+
+        <div class="input-field col s6">
+          <p>How was your last sleep?</p>
+          <select id="sleepQuality">
+            <option value="" disabled selected>Sleep Quality</option>
+            <option value="1">1 (Bad)</option>
+            <option value="2">2 (Okay)</option>
+            <option value="3">3 (Good)</option>
+            <option value="4">4 (Very Good)</option>
+            <option value="5">5 (Best)</option>
+          </select>
+        </div>
+        <br />
+        <p>How long did you sleep (Please enter number of hours)?</p>
+        <input placeholder="Hours you slept" id="sleepDuration" type="number" class="validate" />
+        <br />
+        <div class="input-field col s6">
+          <p>How do you rate your current mood?</p>
+          <select class="form-control" id="moodRating">
+            <option value="" disabled selected>Mood Rating</option>
+            <option value="1">1 (Bad)</option>
+            <option value="2">2 (Okay)</option>
+            <option value="3">3 (Good)</option>
+            <option value="4">4 (Very Good)</option>
+            <option value="5">5 (Best)</option>
+          </select>
+        </div>
+        <br />
+        <div class="input-field col s6">
+          <p>Select your current mood from the list.</p>
+          <select class="form-control" id="moodType">
+            <option value="" disable selected>Current Mood</option>
+            <option value="1">Glad</option>
+            <option value="2">Sad</option>
+            <option value="3">Mad</option>
+            <option value="4">Afrad</option>
+          </select>
+        </div>
+        <br />
+        <div class="input-field col s6">
+          <p>How do you rate your diet today?</p>
+          <select class="form-control" id="dietRating">
+            <option value="" disabled selected>Diet Today</option>
+            <option value="1">1 (Bad)</option>
+            <option value="2">2 (Okay)</option>
+            <option value="3">3 (Good)</option>
+            <option value="4">4 (Very Good)</option>
+            <option value="5">5 (Best)</option>
+          </select>
+        </div>
+        <br />
+        <div class="input-field col s6">
+          <p>How stressed do you feel at the moment?</p>
+          <select class="form-control" id="stressRating">
+            <option value="" disabled selected>Current Stress</option>
+            <option value="1">Very stressed</option>
+            <option value="2">Somewhat stressed</option>
+            <option value="3">Neutral</option>
+            <option value="4">Not very stressed</option>
+            <option value="5">Stress free</option>
+          </select>
+          <br />
+        </div>
+        <div class="input-field col s12">
+          <div class="row">
+            <textarea id="userLog" class="materialize-textarea form-control"></textarea>
+            <label for="textarea1">Log your thoughts and feelings here</label>
+          </div>
+        </div>
+
+        <button class="btn waves-effect waves-light" id="add-btn" type="submit" name="Submit">
+          Submit <i class="material-icons right">send</i>
+        </button>
+      </div>
+    </div>
+    </div>
+  </main>
+
+  <footer class="page-footer light-blue">
+    <div class="row">
+      <div class="container">© 2018 Moodster</div>
+      <!-- <div class="footer-copyright purple"></div> -->
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+  <script src="js/entry.js"></script>
+
+  <script>
+    $(document).ready(function () {
+      $("select").formSelect();
+    });
+  </script>
+</body>
+
+</html>

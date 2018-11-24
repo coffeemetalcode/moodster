@@ -39,7 +39,7 @@ INSERT INTO user_info (user_name, person_name, phone_number) VALUES
 
 INSERT INTO mood_data (user_id, sleep_quality, sleep_amount, mood_rating, mood_type, diet_quality, stress_level, user_entry) VALUES 
 (1, 2, 3, 1, 4, 2, 1, "great day, no complaints"),
-(2, 3, 3, 2, 4, 3, 3, "Feeling a little stressed today.");
+(4, 3, 3, 2, 4, 3, 3, "Feeling a little stressed today.");
 
 -- SELECT * FROM mood_data
 -- LEFT JOIN user_info ON user_info.user_id = mood_data.user_id;
