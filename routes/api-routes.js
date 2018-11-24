@@ -68,7 +68,7 @@ module.exports = function (app) {
       sleep_quality: req.body.sleep_quality,
       sleep_amount: req.body.sleep_amount,
       mood_rating: req.body.mood_rating,
-      mood_type: Dreq.body.mood_type,
+      mood_type: req.body.mood_type,
       diet_quality: req.body.diet_quality,
       stress_level: req.body.stress_level,
       user_entry: req.body.user_entry

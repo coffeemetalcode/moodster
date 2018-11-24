@@ -1,9 +1,5 @@
 module.exports = function (sequelize, DataTypes) {
   var CheckIn = sequelize.define("CheckIn", {
-    id: {
-      type: DataTypes.INTEGER,
-      primaryKey: true
-    },
     user_id: DataTypes.INTEGER,
     sleep_quality: DataTypes.INTEGER,
     sleep_amount: DataTypes.INTEGER,
