@@ -1,9 +1,5 @@
-module.exports = function (sequelize, DataTypes) {
+module.exports = function(sequelize, DataTypes) {
   var CheckIn = sequelize.define("CheckIn", {
-    id: {
-      type: DataTypes.INTEGER,
-      primaryKey: true
-    },
     user_id: DataTypes.INTEGER,
     sleep_quality: DataTypes.INTEGER,
     sleep_amount: DataTypes.INTEGER,
@@ -11,7 +7,15 @@ module.exports = function (sequelize, DataTypes) {
     mood_type: DataTypes.INTEGER,
     diet_quality: DataTypes.INTEGER,
     stress_level: DataTypes.INTEGER,
-    user_entry: DataTypes.TEXT
+    user_entry: DataTypes.TEXT,
+    createdAt: {
+      allowNull: true,
+      type: DataTypes.DATE
+    },
+    updatedAt: {
+      allowNull: true,
+      type: DataTypes.DATE
+    }
   });
   return CheckIn;
 };
