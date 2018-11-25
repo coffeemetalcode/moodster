@@ -12,5 +12,10 @@ module.exports = function (sequelize, DataTypes) {
       type: DataTypes.DATE
     }
   });
+  User.associate = function(models) {
+    User.hasMany(models.CheckIn, {
+      onDelete: "cascade"
+    });
+  }
   return User;
 };

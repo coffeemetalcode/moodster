@@ -7,7 +7,7 @@ INSERT INTO Users (id, user_name, person_name, phone_number) VALUES
 
 -- Populate CheckIns with starter data --
 
-INSERT INTO CheckIns (id, user_id, sleep_quality, sleep_amount, mood_rating, mood_type, diet_quality, stress_level, user_entry) VALUES 
+INSERT INTO CheckIns (id, UserId, sleep_quality, sleep_amount, mood_rating, mood_type, diet_quality, stress_level, user_entry) VALUES 
 (1, 1, 2, 6, 1, 1, 2, 1, "great day, no complaints"),
 (2, 1, 3, 6, 2, 1, 3, 3, "Feeling a little stressed today."),
 (3, 1, 4, 7, 1, 1, 2, 3, "Good sleep. I need to eat better."),
