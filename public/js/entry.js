@@ -7,21 +7,14 @@ $("#add-btn").on("click", function (event) {
 
     // make a newUser obj
     var newCheckIn = {
-        // user name from user name input
+        // Reading the values from entry.html and packaging them to be read by the model
         // user_id: $("#username").val().trim(),
-        // name from name input
         sleep_quality: $("#sleepQuality").val(),
-        // phone number from mobile input
         sleep_amount: $("#sleepDuration").val().trim(),
-        // user name from user name input
         mood_rating: $("#moodRating").val(),
-        // name from name input
         mood_type: $("#moodType").val(),
-        // phone number from mobile input
         diet_quality: $("#dietRating").val(),
-        // name from name input
         stress_level: $("#stressRating").val(),
-        // phone number from mobile input
         user_entry: $("#userLog").val().trim(),
 
     };
@@ -34,6 +27,7 @@ $("#add-btn").on("click", function (event) {
             console.log(data);
             // tell the user we're adding a user with an alert window
             alert("Adding check in...");
+            window.location.href = "/user";
         });
 
     // empty each input box by replacing the value with an empty string
