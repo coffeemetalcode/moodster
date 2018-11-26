@@ -41,7 +41,7 @@ var users = {
   }
 }
 
-console.log(users.david.entries[2].mood_type);
+// console.log(users.david.entries[2].mood_type);
 
 // Load the Visualization API and the corechart package.
 google.charts.load("current", {

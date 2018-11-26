@@ -6,6 +6,8 @@ CREATE DATABASE moodster_db;
 
 USE moodster_db;
 
+-- Sequelize handles everything below this comment - doing it in this file results in empty tables that resemble Sequlize tables (e.g. - a 'User' table and a 'Users' table, where the 'User' table is empty)
+
 -- CREATE TABLE User
 -- (
 -- user_id INT AUTO_INCREMENT NOT NULL UNIQUE,
