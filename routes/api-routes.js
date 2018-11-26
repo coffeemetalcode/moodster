@@ -9,17 +9,27 @@ module.exports = function (app) {
       });
   });
   //Get one user by id
-  app.get("/api/user/:id", function (req, res) {
+  // app.get("/api/user/:id", function (req, res) {
+  //   db.User.findAll({
+  //     where: {
+  //       id: req.params.id
+  //     }
+  //   })
+  //     .then(function (dbUsers) {
+  //       res.json(dbUsers);
+  //     });
+  // });
+  //Get one user by username
+  app.get("/api/user/:user_name", function (req, res) {
     db.User.findAll({
       where: {
-        id: req.params.id
+        user_name: req.params.user_name
       }
     })
       .then(function (dbUsers) {
         res.json(dbUsers);
       });
   });
-
   // Create a new user
   app.post("/api/user", function (req, res) {
     db.User.create({
@@ -40,19 +50,6 @@ module.exports = function (app) {
       });
   });
   
-  // DBS - the below causes problems because ~/checkin/:id and ~checkin/:UserId seem the same to the routes file.
-
-  //Get one check-in by id 
-  // app.get("/api/checkin/:id", function (req, res) {
-  //   db.CheckIn.findOne({
-  //     where: {
-  //       id: req.params.id
-  //     }
-  //   })
-  //     .then(function (dbCheckIns) {
-  //       res.json(dbCheckIns);
-  //     });
-  // });
   //Get all checkins by user_id
   app.get("/api/checkin/:UserId", function (req, res) {
     db.CheckIn.findAll({

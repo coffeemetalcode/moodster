@@ -17,7 +17,7 @@ $("#add-btn").on("click", function(event) {
         mood_type: $("#moodType").val(),
         diet_quality: $("#dietRating").val(),
         stress_level: $("#stressRating").val(),
-        user_entry: $("#userLog").val().trim(),
+        // user_entry: $("#userLog").val().trim(),
 
     };
 
@@ -40,6 +40,6 @@ $("#add-btn").on("click", function(event) {
     $("#dietRating").val("");
     $("#username").val("");
     $("#stressRating").val("");
-    $("#userLog").val("");
+    // $("#userLog").val("");
 
 });
