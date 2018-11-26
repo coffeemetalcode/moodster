@@ -1,8 +1,8 @@
 -- Create Database --
 
-DROP DATABASE IF EXISTS moodster_db;
+-- DROP DATABASE IF EXISTS moodster_db;
 
-CREATE DATABASE moodster_db;
+-- CREATE DATABASE moodster_db;
 
 USE moodster_db;
 
