@@ -4,8 +4,8 @@ userIdFromUrl = urlPieces[3];
 // Code here handles what happens when a user submits a new check in.
 // Effectively it takes the form inputs then sends it to the server to save in the DB.
 // when user clicks add-btn
-$("#add-btn").on("click", function (event) {
-    event.preventDefault();
+$("#add-btn").on("click", function(event) {
+  event.preventDefault();
 
     // make a newUser obj
     var newCheckIn = {
@@ -41,6 +41,5 @@ $("#add-btn").on("click", function (event) {
     $("#username").val("");
     $("#stressRating").val("");
     $("#userLog").val("");
-
 
 });
