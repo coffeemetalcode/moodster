@@ -23,7 +23,8 @@ $("#add-btn").on("click", function(event) {
         console.log(data);
         // tell the user we're adding a user with an alert window
         alert("Adding user...");
-        window.location.href = "/entry";
+        //send to an entry page that incorporates their user id into the url so it can be read there
+        window.location.href = data.id + "/entry";
       });
   
     // empty each input box by replacing the value with an empty string

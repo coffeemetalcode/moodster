@@ -1,6 +1,8 @@
+var url = window.location.href;
+var urlPieces = url.split("/");
+userIdFromUrl = urlPieces[3];
 // Code here handles what happens when a user submits a new check in.
 // Effectively it takes the form inputs then sends it to the server to save in the DB.
-
 // when user clicks add-btn
 $("#add-btn").on("click", function (event) {
     event.preventDefault();
@@ -8,7 +10,7 @@ $("#add-btn").on("click", function (event) {
     // make a newUser obj
     var newCheckIn = {
         // Reading the values from entry.html and packaging them to be read by the model
-        // user_id: $("#username").val().trim(),
+        UserId: userIdFromUrl,
         sleep_quality: $("#sleepQuality").val(),
         sleep_amount: $("#sleepDuration").val().trim(),
         mood_rating: $("#moodRating").val(),

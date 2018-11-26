@@ -54,7 +54,7 @@ module.exports = function (app) {
   app.get("/api/checkin/:user_id", function (req, res) {
     db.CheckIn.findAll({
       where: {
-        user_id: req.params.id
+        user_id: req.params.user_id
       }
     }).
       then(function (dbCheckIns) {

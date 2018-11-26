@@ -1,6 +1,6 @@
 module.exports = function (sequelize, DataTypes) {
   var CheckIn = sequelize.define("CheckIn", {
-    user_id: DataTypes.INTEGER,
+    UserId: DataTypes.INTEGER,
     sleep_quality: DataTypes.INTEGER,
     sleep_amount: DataTypes.INTEGER,
     mood_rating: DataTypes.INTEGER,
