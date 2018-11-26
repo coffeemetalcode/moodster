@@ -1,37 +1,48 @@
 
-$("#createEntryBtn").on("click", function(event) {
+$("#createEntryBtn").on("click", function (event) {
   event.preventDefault();
 
   var login = {
     username: $("#username").val().trim(),
   };
-console.log("I'm working " + login.username);
 
   if (!(login.username)) {
     alert("You must enter a username");
     return;
   }
-
-  $("#username").val("");
-  window.location.href = "/entry";
-
+  $.get("/api/user/" + login.username, function (data) {
+    console.log("User", data);
+    if (!data || !data.length) {
+      alert("Username does not exist. Please sign up.");
+    }
+    else {
+      $("#username").val("");
+      console.log(data[0].id);
+      window.location.href = "/" + data[0].id + "/entry";
+    }
+  });
 });
 
 
-$("#viewProfileBtn").on("click", function(event) {
+$("#viewProfileBtn").on("click", function (event) {
   event.preventDefault();
-
   var login = {
     username: $("#username").val().trim(),
   };
-console.log("I'm working " + login.username);
-
+  console.log("I'm working " + login.username);
   if (!(login.username)) {
     alert("You must enter a username");
     return;
   }
-
-  $("#username").val("");
-  window.location.href = "/user";
-
+  $.get("/api/user/" + login.username, function (data) {
+    console.log("User", data);
+    if (!data || !data.length) {
+      alert("Username does not exist. Please sign up.");
+    }
+    else {
+      $("#username").val("");
+      console.log(data[0].id);
+      window.location.href = "/" + data[0].id;
+    }
+  });
 });
