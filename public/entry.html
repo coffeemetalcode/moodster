@@ -10,7 +10,7 @@
 
     <!-- CSS -->
     <link
-      href="styles/reset.css"
+      href="../styles/reset.css"
       rel="stylesheet"
     />
     <link
@@ -18,13 +18,13 @@
       rel="stylesheet"
     />
     <link
-      href="styles/materialize.css"
+      href="../styles/materialize.css"
       type="text/css"
       rel="stylesheet"
       media="screen,projection"
     />
     <link
-      href="styles/style.css"
+      href="../styles/style.css"
       type="text/css"
       rel="stylesheet"
       media="screen,projection"
@@ -39,7 +39,6 @@
             <ul class="right hide-on-med-and-down">
               <li><a href="#">Sign up</a></li>
             </ul>
-
             <ul id="nav-mobile" class="sidenav">
               <li><a href="#">Sign up</a></li>
               <li><a href="#">Our code</a></li>
@@ -58,7 +57,6 @@
           <div class="row center">
             <h5 class="header col s12 light">How are you feeling today?</h5>
           </div>
-
           <div class="input-field col s6">
             <p>How was your last sleep?</p>
             <select id="sleepQuality">
@@ -138,21 +136,24 @@
       <br /><br /><br />
     </main>
 
-    <footer class="page-footer light-blue">
-      <div class="row">
-        <div class="container">© 2018 Moodster</div>
-        <!-- <div class="footer-copyright purple"></div> -->
-      </div>
-    </footer>
+  <footer class="page-footer light-blue">
+    <div class="row">
+      <div class="container">© 2018 Moodster</div>
+      <!-- <div class="footer-copyright purple"></div> -->
+    </div>
+  </footer>
 
-    <!-- Scripts -->
-    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <script src="js/materialize.js"></script>
-    <script src="js/init.js"></script>
-    <script>
-      $(document).ready(function() {
-        $("select").formSelect();
-      });
-    </script>
-  </body>
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="../js/materialize.js"></script>
+  <script src="../js/init.js"></script>
+  <script src="../js/entry.js"></script>
+
+  <script>
+    $(document).ready(function () {
+      $("select").formSelect();
+    });
+  </script>
+</body>
+
 </html>
