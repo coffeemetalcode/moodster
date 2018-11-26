@@ -1,7 +1,12 @@
+var url = window.location.href;
+var urlPieces = url.split("/");
+userIdFromUrl = urlPieces[3];
+console.log("urlPieces: " + urlPieces);
+console.log("userIdFromUrl: " + userIdFromUrl);
 // When the document loads (when the /user/:id route is triggered), populate the chart with the user's data
 $(document).ready(function() {
   // for now, this is hard-coded to pull in entries from the user with UserId=1
-  $.get("/api/checkin/1", function(data) {
+  $.get("/api/checkin/" + userIdFromUrl, function(data) {
     console.log("user = " + data[0].UserId);
 
     // Load the Visualization API and the corechart package.
