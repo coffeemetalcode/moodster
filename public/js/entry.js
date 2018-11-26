@@ -29,7 +29,7 @@ $("#add-btn").on("click", function(event) {
             console.log(data);
             // tell the user we're adding a user with an alert window
             alert("Adding check in...");
-            window.location.href = "/user";
+            window.location.href = "/" + userIdFromUrl;
         });
 
     // empty each input box by replacing the value with an empty string
