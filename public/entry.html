@@ -7,10 +7,10 @@
   <title>Moodster Home</title>
 
   <!-- CSS -->
-  <link href="styles/reset.css" rel="stylesheet" />
+  <link href="../styles/reset.css" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
-  <link href="styles/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
-  <link href="styles/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+  <link href="../styles/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
+  <link href="../styles/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
 </head>
 
 <body>
@@ -18,13 +18,12 @@
     <div class="navbar-fixed">
       <nav class="light-blue lighten-1" role="navigation">
         <div class="nav-wrapper container">
-          <a id="logo-container" href="index.html" class="brand-logo">Moodster</a>
+          <a id="logo-container" href="/index.html" class="brand-logo">Moodster</a>
           <ul class="right hide-on-med-and-down">
-            <li><a href="signup.html">Sign up</a></li>
+            <li><a href="/signup.html">Sign up</a></li>
           </ul>
-
           <ul id="nav-mobile" class="sidenav">
-            <li><a href="signup.html">Sign up</a></li>
+            <li><a href="/signup.html">Sign up</a></li>
             <li><a href="#">Our code</a></li>
             <li><a href="#">Previous projects</a></li>
           </ul>
@@ -39,7 +38,6 @@
         <div class="row center">
           <h5 class="header col s12 light">How are you feeling today?</h5>
         </div>
-
         <div class="input-field col s6">
           <p>How was your last sleep?</p>
           <select id="sleepQuality">
@@ -79,9 +77,9 @@
         </div>
         <br />
         <div class="input-field col s6">
-          <p>How do you rate your diet today?</p>
+          <p>How do you rate your current diet?</p>
           <select class="form-control" id="dietRating">
-            <option value="" disabled selected>Diet Today</option>
+            <option value="" disabled selected>Current Diet</option>
             <option value="1">1 (Bad)</option>
             <option value="2">2 (Okay)</option>
             <option value="3">3 (Good)</option>
@@ -101,20 +99,13 @@
             <option value="5">Stress free</option>
           </select>
           <br />
+          <button class="btn waves-effect waves-light" id="add-btn" type="submit" name="Submit">
+            Submit <i class="material-icons right">send</i>
+          </button>
         </div>
-        <div class="input-field col s12">
-          <div class="row">
-            <textarea id="userLog" class="materialize-textarea form-control"></textarea>
-            <label for="textarea1">Log your thoughts and feelings here</label>
-          </div>
-        </div>
-
-        <button class="btn waves-effect waves-light" id="add-btn" type="submit" name="Submit">
-          Submit <i class="material-icons right">send</i>
-        </button>
       </div>
     </div>
-    </div>
+    <br /><br /><br />
   </main>
 
   <footer class="page-footer light-blue">
@@ -126,9 +117,9 @@
 
   <!-- Scripts -->
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-  <script src="js/materialize.js"></script>
-  <script src="js/init.js"></script>
-  <script src="js/entry.js"></script>
+  <script src="../js/materialize.js"></script>
+  <script src="../js/init.js"></script>
+  <script src="../js/entry.js"></script>
 
   <script>
     $(document).ready(function () {

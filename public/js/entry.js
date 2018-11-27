@@ -1,21 +1,23 @@
+var url = window.location.href;
+var urlPieces = url.split("/");
+userIdFromUrl = urlPieces[3];
 // Code here handles what happens when a user submits a new check in.
 // Effectively it takes the form inputs then sends it to the server to save in the DB.
-
 // when user clicks add-btn
-$("#add-btn").on("click", function (event) {
-    event.preventDefault();
+$("#add-btn").on("click", function(event) {
+  event.preventDefault();
 
     // make a newUser obj
     var newCheckIn = {
         // Reading the values from entry.html and packaging them to be read by the model
-        // user_id: $("#username").val().trim(),
+        UserId: userIdFromUrl,
         sleep_quality: $("#sleepQuality").val(),
         sleep_amount: $("#sleepDuration").val().trim(),
         mood_rating: $("#moodRating").val(),
         mood_type: $("#moodType").val(),
         diet_quality: $("#dietRating").val(),
         stress_level: $("#stressRating").val(),
-        user_entry: $("#userLog").val().trim(),
+        // user_entry: $("#userLog").val().trim(),
 
     };
 
@@ -27,7 +29,7 @@ $("#add-btn").on("click", function (event) {
             console.log(data);
             // tell the user we're adding a user with an alert window
             alert("Adding check in...");
-            window.location.href = "/user";
+            window.location.href = "/" + userIdFromUrl;
         });
 
     // empty each input box by replacing the value with an empty string
@@ -38,7 +40,6 @@ $("#add-btn").on("click", function (event) {
     $("#dietRating").val("");
     $("#username").val("");
     $("#stressRating").val("");
-    $("#userLog").val("");
-
+    // $("#userLog").val("");
 
 });

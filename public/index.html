@@ -1,110 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, maximum-scale=1.0"
-    />
-    <title>Moodster Home</title>
 
-    <!-- CSS -->
-    <link
-      href="styles/reset.css"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet"
-    />
-    <link
-      href="styles/materialize.css"
-      type="text/css"
-      rel="stylesheet"
-      media="screen,projection"
-    />
-    <link
-      href="styles/style.css"
-      type="text/css"
-      rel="stylesheet"
-      media="screen,projection"
-    />
-  </head>
-  <body>
-    <header>
-      <div class="navbar-fixed">
-        <nav class="light-blue lighten-1" role="navigation">
-          <div class="nav-wrapper container">
-            <a id="logo-container" href="index.html" class="brand-logo">Moodster</a>
-            <ul class="right hide-on-med-and-down">
-              <li><a href="signup.html">Sign up</a></li>
-            </ul>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
+  <title>Moodster Home</title>
 
-            <ul id="nav-mobile" class="sidenav">
-              <li><a href="signup.html">Sign up</a></li>
-              <li><a href="#">Our code</a></li>
-              <li><a href="#">Previous projects</a></li>
-            </ul>
-            <a href="#" data-target="nav-mobile" class="sidenav-trigger"
-              ><i class="material-icons">menu</i></a
-            >
-          </div>
-        </nav>
-      </div>
-    </header>
+  <!-- CSS -->
+  <link href="styles/reset.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <link href="styles/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
+  <link href="styles/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+</head>
 
-    <main>
-      <div class="section no-pad-bot" id="index-banner">
-        <div class="container">
-          <div class="row center">
-            <h5 class="header col s12 light">
-              A Mobile-Friendly Mood Tracker
-            </h5>
-          </div>
+<body>
+  <header>
+    <div class="navbar-fixed">
+      <nav class="light-blue lighten-1" role="navigation">
+        <div class="nav-wrapper container">
+          <a id="logo-container" href="index.html" class="brand-logo">Moodster</a>
+          <ul class="right hide-on-med-and-down">
+            <li><a href="signup.html">Sign up</a></li>
+          </ul>
 
-          <div class="input-field col s6">
-            <i class="material-icons prefix">account_circle</i>
-            <input
-              placeholder="Username"
-              id="username"
-              type="text"
-              class="validate"
-            />
-            <button
-              class="btn waves-effect waves-light"
-              id="createEntryBtn"
-              type="submit"
-              name="action"
-            >
-              Create an Entry <i class="material-icons right">send</i>
-            </button>
-             or 
-            <button
-              class="btn waves-effect waves-light"
-              id="viewProfileBtn"
-              type="submit"
-              name="action"
-            >
-              View Your Profile <i class="material-icons right">send</i>
-            </button>
-             or 
-            <a href="signup.html">Sign Up</a>
-          </div>
+          <ul id="nav-mobile" class="sidenav">
+            <li><a href="signup.html">Sign up</a></li>
+            <li><a href="#">Our code</a></li>
+            <li><a href="#">Previous projects</a></li>
+          </ul>
+          <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="section no-pad-bot" id="index-banner">
+      <div class="container">
+        <div class="row center">
+          <h5 class="header col s12 light">
+            A Mobile-Friendly Mood Tracker
+          </h5>
+        </div>
+
+        <div class="input-field col s6">
+          <i class="material-icons prefix">account_circle</i>
+          <input placeholder="Username" id="username" type="text" class="validate" />
+          <br />
+          <button class="btn waves-effect waves-light" id="createEntryBtn" type="submit" name="action">
+            Create an Entry <i class="material-icons right">send</i>
+          </button>
+          or
+          <button class="btn waves-effect waves-light" id="viewProfileBtn" type="submit" name="action">
+            View Your Profile <i class="material-icons right">send</i>
+          </button>
+          or
+          <a href="signup.html">Sign Up</a>
         </div>
       </div>
-    </main>
+    </div>
+  </main>
 
-    <footer class="page-footer light-blue">
-      <div class="row">
-        <div class="container">© 2018 Moodster</div>
-        <!-- <div class="footer-copyright purple"></div> -->
-      </div>
-    </footer>
+  <footer class="page-footer light-blue">
+    <div class="row">
+      <div class="container">© 2018 Moodster</div>
+      <!-- <div class="footer-copyright purple"></div> -->
+    </div>
+  </footer>
 
-    <!-- Scripts -->
-    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <script src="js/materialize.js"></script>
-    <script src="js/init.js"></script>
-    <script src="js/index.js"></script>
-  </body>
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+  <script src="js/index.js"></script>
+</body>
+
 </html>

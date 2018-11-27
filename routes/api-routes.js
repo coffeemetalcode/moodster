@@ -9,17 +9,27 @@ module.exports = function (app) {
       });
   });
   //Get one user by id
-  app.get("/api/user/:id", function (req, res) {
+  // app.get("/api/user/:id", function (req, res) {
+  //   db.User.findAll({
+  //     where: {
+  //       id: req.params.id
+  //     }
+  //   })
+  //     .then(function (dbUsers) {
+  //       res.json(dbUsers);
+  //     });
+  // });
+  //Get one user by username
+  app.get("/api/user/:user_name", function (req, res) {
     db.User.findAll({
       where: {
-        id: req.params.id
+        user_name: req.params.user_name
       }
     })
       .then(function (dbUsers) {
         res.json(dbUsers);
       });
   });
-
   // Create a new user
   app.post("/api/user", function (req, res) {
     db.User.create({
@@ -39,22 +49,14 @@ module.exports = function (app) {
         res.json(dbCheckIns);
       });
   });
-  //Get one check-in by id
-  app.get("/api/checkin/:id", function (req, res) {
-    db.CheckIn.findOne({
-      where: {
-        id: req.params.id
-      }
-    })
-      .then(function (dbCheckIns) {
-        res.json(dbCheckIns);
-      });
-  });
+  
   //Get all checkins by user_id
-  app.get("/api/checkin/:user_id", function (req, res) {
+  app.get("/api/checkin/:UserId", function (req, res) {
     db.CheckIn.findAll({
       where: {
-        user_id: req.params.id
+
+        UserId: req.params.UserId
+
       }
     }).
       then(function (dbCheckIns) {
@@ -64,7 +66,7 @@ module.exports = function (app) {
   // Create a new check-in
   app.post("/api/checkin", function (req, res) {
     db.CheckIn.create({
-      user_id: req.body.user_id,
+      UserId: req.body.UserId,
       sleep_quality: req.body.sleep_quality,
       sleep_amount: req.body.sleep_amount,
       mood_rating: req.body.mood_rating,
