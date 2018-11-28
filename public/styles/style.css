@@ -27,12 +27,17 @@ main {
   flex: 1 0 auto;
 }
 
+#footer-link {
+  color: white;
+}
+
 .page-footer {
   position: fixed;
   left: 0;
   bottom: 0;
   width: 100%;
   z-index: 1;
+  
 }
 
 /* Media Queries - I started with the file at the end of this github link: https://gist.github.com/gokulkrishh/242e68d1ee94ad05f488#file-media-query-css */
