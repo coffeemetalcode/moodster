@@ -6,9 +6,9 @@ const accountSid = keys.twilio.id;
 const authToken = keys.twilio.token;
 const client = require('twilio')(accountSid, authToken);
 
-var fourTimesADay = '* 8-20/4 * * *';
-var threeTimesADay = '* 8-20/6 * * *';
-var twoTimesADay = '* 8-20/12 * * *';
+var fourTimesADay = '0 8-20/4 * * *';
+var threeTimesADay = '0 8-20/6 * * *';
+var twoTimesADay = '0 8-20/12 * * *';
 var phoneNumber = 8049383949;
 var userId = 1;
 
