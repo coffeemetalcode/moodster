@@ -12,9 +12,9 @@ $("#add-btn").on("click", function (event) {
     // name from name input
     person_name: $("#name").val().trim(),
     // phone number from mobile input
-    phone_number: $("#mobile").val().trim(),
+    phone_number: $("#mobile").val().trim()
     // text frequency preference from frequency input
-    sms_frequency: $("texts").val()
+    // sms_frequency: $("texts").val()
   };
 
   $.get("/api/user/", function (data) {
