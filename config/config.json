@@ -1,7 +1,7 @@
 {
   "development": {
-    "username": "root",
-    "password": "root",
+    "username": "david",
+    "password": "",
     "database": "moodster_db",
     "host": "localhost",
     "dialect": "mysql"
