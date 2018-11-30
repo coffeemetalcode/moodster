@@ -61,6 +61,4 @@ typings/
 .next
 
 # specific files
-index.bak.html
-scratch.html
-scratch.js
+config.json
