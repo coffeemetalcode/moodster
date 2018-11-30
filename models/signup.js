@@ -3,6 +3,10 @@ module.exports = function (sequelize, DataTypes) {
     user_name: DataTypes.TEXT,
     person_name: DataTypes.TEXT,
     phone_number: DataTypes.TEXT,
+    // sms_frequency: {
+    //   allowNull: true,
+    //   type: DataTypes.INTEGER
+    // },      
     createdAt: {
       allowNull: true,
       type: DataTypes.DATE

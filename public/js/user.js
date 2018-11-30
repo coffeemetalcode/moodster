@@ -15,7 +15,7 @@ $(document).ready(function() {
     });
 
     // Set a callback to run when the Google Visualization API is loaded.
-    google.charts.setOnLoadCallback(drawChart);
+    google.charts.setOnLoadCallback(drawPieChart);
 
     // Callback that creates and populates a data table,
     // instantiates the pie chart, passes in the data and
@@ -23,7 +23,7 @@ $(document).ready(function() {
     var moodData = data;
 
     // This came right from Google Charts docs.
-    function drawChart() {
+    function drawPieChart() {
       console.log("data " + moodData);
 
       // Count instances of mood types
@@ -66,8 +66,8 @@ $(document).ready(function() {
       var options = {
         title: "Moods Expressed",
         is3D: false,
-        width: 400,
-        height: 300
+        width: 475,
+        height: 350
       };
 
       // Instantiate and draw our chart, passing in some options.
@@ -80,5 +80,57 @@ $(document).ready(function() {
         packages: ["calendar"]
       });
     }
+
+    // Line Chart from Google Charts
+    google.charts.load("current", { packages: ["line"] });
+    google.charts.setOnLoadCallback(drawLineChart);
+    function drawLineChart() {
+      // console.log("I'm a line chart");
+      var moodsterLineChart = [];
+      var moodsterCheckIn = [];
+      var entry = 0;
+      var rating;
+      var sleep;
+      var diet;
+      var stress;
+
+      for (var key in moodData) {
+        entry++;
+        rating = moodData[key].mood_rating;
+        sleep = moodData[key].sleep_quality;
+        diet = moodData[key].diet_quality;
+        stress = moodData[key].stress_level;
+        moodsterCheckIn = [entry, rating, sleep, diet, stress];
+        console.log("inside " + moodsterCheckIn);
+        moodsterLineChart.push(moodsterCheckIn);
+      }
+      console.log(moodsterLineChart);
+
+      var data = new google.visualization.DataTable();
+      data.addColumn("number", "Entry");
+      data.addColumn("number", "Mood Rating");
+      data.addColumn("number", "Sleep Quality");
+      data.addColumn("number", "Diet Quality");
+      data.addColumn("number", "Stress Level");
+      data.addRows(moodsterLineChart);
+      var options = {
+        chart: {
+          legend: 'top',
+          title: "Mood / Lifestly Correlations",
+          subtitle: "by number of checkins"
+        },
+        width: 475,
+        height: 350
+      };
+      var chart = new google.charts.Line(
+        document.getElementById("line_chart_div")
+      );
+      chart.draw(data, google.charts.Line.convertOptions(options));
+    }
   });
+  // $.get("/api/checkin/" + userIdFromUrl, function(data) {
+  //   // console.log("user = " + data[0].UserId);
+  //   console.log("Hello Dave");
+
+  // });
 });

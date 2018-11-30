@@ -15,18 +15,18 @@
 
 <body>
   <header>
-    <div class="navbar-fixed">
+    <div class="navbarfixed">
       <nav class="light-blue lighten-1" role="navigation">
         <div class="nav-wrapper container">
-          <a id="logo-container" href="/index.html" class="brand-logo">Moodster</a>
+          <a id="logo-container" href="index.html" class="brand-logo">Moodster</a>
           <ul class="right hide-on-med-and-down">
-            <li><a href="/signup.html">Sign up</a></li>
+            <li><a href="signup.html">Sign up</a></li>
           </ul>
 
           <ul id="nav-mobile" class="sidenav">
-            <li><a href="/signup.html">Sign up</a></li>
-            <li><a href="#">Our code</a></li>
-            <li><a href="#">Previous projects</a></li>
+            <li><a href="signup.html">Sign up</a></li>
+            <li><a href="https://github.com/dbstocker/moodster" target="_blank">Our code</a></li>
+            <li><a href="https://reneegrinnell.github.io/GroupProject1-JAMR/" target="_blank">Previous projects</a></li>
           </ul>
           <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
         </div>
@@ -43,26 +43,37 @@
           </h5>
         </div>
 
-        <div class="input-field col s6">
-          <i class="material-icons prefix">account_circle</i>
-          <input placeholder="Username" id="username" type="text" class="validate" />
-          <!-- <i class="material-icons prefix">face</i> -->
-          <input placeholder="Full Name" id="name" type="text" class="validate" />
-          <!-- <i class="material-icons prefix">phone_android</i> -->
-          <input placeholder="Mobile" id="mobile" type="text" class="validate" />
-          <button class="btn waves-effect waves-light" id="add-btn" type="submit" name="Submit">
-            Submit <i class="material-icons right">send</i>
-          </button>
+
+        <div class="row">
+          <form class="col s12">
+            <div class="row">
+              <div class="input-field col s12">
+                <i class="material-icons prefix">account_circle</i>
+                <input id="icon_prefix" placeholder="Username" id="username" type="text" class="validate" required />
+              </div>
+              <div class="input-field col s12">
+                <i class="material-icons prefix">face</i>
+                <input id="icon_prefix" placeholder="Full Name" id="name" type="text" class="validate" required />
+              </div>
+              <div class="input-field col s12">
+                <i class="material-icons prefix">phone_android</i>
+                <input id="icon_prefix" placeholder="Mobile" id="mobile" type="text" class="validate" required pattern="{10-11}" />
+              </div>
+            </div>
+          </form>
         </div>
+
+        <button class="btn waves-effect waves-light" id="add-btn" type="submit" name="Submit">
+          Submit <i class="material-icons right">send</i>
+        </button>
       </div>
+    </div>
     </div>
   </main>
 
   <footer class="page-footer light-blue">
     <div class="row">
       <div class="container">© 2018 Moodster</div>
-      <!-- <div class="footer-copyright purple"></div> -->
-    </div>
   </footer>
 
   <!-- Scripts -->
@@ -70,6 +81,7 @@
   <script src="js/materialize.js"></script>
   <script src="js/init.js"></script>
   <script src="js/signup.js"></script>
+
 </body>
 
 </html>
