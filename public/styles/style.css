@@ -9,7 +9,7 @@
  * Made By MaterializeCSS.com
  */
 
- .icon-block {
+.icon-block {
   padding: 0 15px;
 }
 .icon-block .material-icons {
@@ -18,6 +18,10 @@
 
 body, p {
   color: #444;
+}
+
+.btn {
+  margin-bottom: 8px;
 }
 
 footer {
