@@ -113,21 +113,20 @@ $(document).ready(function() {
       data.addColumn("number", "Diet Quality");
       data.addColumn("number", "Stress Level");
       data.addRows(moodsterLineChart);
-      var options = {
-        fontSize: 12,
-        title: "Mood / Lifestlye Correlations",
-        width: 500,
+      var lineOptions = {
+        legend: { position: "top" },
+        title: "Mood / Lifestyle Correlations",
+        subtitle: "by number of checkins",
+        curveType: "function",
+        // curveType: "function",
+        width: 475,
+
         height: 350
       };
       var chart = new google.charts.Line(
         document.getElementById("line_chart_div")
       );
-      chart.draw(data, google.charts.Line.convertOptions(options));
+      chart.draw(data, google.charts.Line.convertOptions(lineOptions));
     }
   });
-  // $.get("/api/checkin/" + userIdFromUrl, function(data) {
-  //   // console.log("user = " + data[0].UserId);
-  //   console.log("Hello Dave");
-
-  // });
 });

@@ -16,7 +16,15 @@
   font-size: inherit;
 }
 
-/* Sticky Footer -- this doesn't seem to do anything. */
+body, p {
+  color: #444;
+}
+
+footer {
+  font-size: 75%;
+}
+
+/* Sticky Footer */
 
 body, p {
   display: flex;
@@ -36,7 +44,7 @@ main {
   left: 0;
   bottom: 0;
   width: 100%;
-  z-index: 1;
+  z-index: 2;
   
 }
 
@@ -50,10 +58,10 @@ main {
 @media (min-width: 1281px) {
   /* //CSS */
   body, p {
-    color: orange; 
+    /* color: orange;  */
     font-size: 155%;
   }
-  #donutchart, #combochart {
+  #chart_div, #line_chart_div {
     width: 1266px;
   }
 }
@@ -66,10 +74,10 @@ main {
 @media (min-width: 1025px) and (max-width: 1280px) {
   /* //CSS */
   body, p {
-    color: green; 
+    /* color: green;  */
     font-size: 135%;
   }
-  #donutchart, #combochart {
+  #chart_div, #line_chart_div {
     width: 1010px;
   }
 }
@@ -91,10 +99,10 @@ main {
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
   /* //CSS */
   body, p {
-    color: blue; /* comment out later */
+    /* color: purple; /* comment out later */
     font-size: 145%;
   }
-  #donutchart, #combochart {
+  #chart_div, #line_chart_div {
     width: 753px;
   }
 }
@@ -107,10 +115,10 @@ main {
 @media (min-width: 481px) and (max-width: 767px) {
   /* //CSS */
   body, p {
-    color: blue; /* comment out later */
+    /* color: blue; /* comment out later */
     font-size: 145%;
   }
-  #donutchart, #combochart {
+  #chart_div, #line_chart_div {
     width: 466px;
   }
 }
@@ -123,11 +131,11 @@ main {
 @media (min-width: 320px) and (max-width: 480px) {
   /* //CSS */
   body, p {
-    color: red; /* comment out later */
+    /* color: red; /* comment out later */
     font-size: 138%;
   }
 
-  #donutchart, #combochart {
+  #chart_div, #line_chart_div {
     width: 300px;
   }
 }
