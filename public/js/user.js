@@ -114,12 +114,9 @@ $(document).ready(function() {
       data.addColumn("number", "Stress Level");
       data.addRows(moodsterLineChart);
       var options = {
-        chart: {
-          legend: 'top',
-          title: "Mood / Lifestly Correlations",
-          subtitle: "by number of checkins"
-        },
-        width: 475,
+        fontSize: 12,
+        title: "Mood / Lifestlye Correlations",
+        width: 500,
         height: 350
       };
       var chart = new google.charts.Line(
