@@ -1,6 +1,7 @@
 // Code here handles what happens when a new user submits their information.
 // Effectively it takes the form inputs then sends it to the server to save in the DB.
 var unique = true;
+
 // when user clicks add-btn
 $("#add-btn").on("click", function (event) {
   event.preventDefault();
@@ -16,6 +17,19 @@ $("#add-btn").on("click", function (event) {
     // text frequency preference from frequency input
     // sms_frequency: $("texts").val()
   };
+
+  if (!(newUser.user_name)) {
+    alert("You must enter a unique username to create a Moodster profile.");
+    return;
+  }
+  if (!(newUser.person_name)) {
+    alert("You must fill in your name to create a Moodster profile.");
+    return;
+  }
+  if (!(newUser.phone_number) || newUser.phone_number.length < 10) {
+    alert("You must enter a valid 10-digit mobile number to create a Moodster profile.");
+    return;
+  }
 
   $.get("/api/user/", function (data) {
     for (i = 0; i < data.length; i++) {
