@@ -66,8 +66,8 @@ $(document).ready(function() {
       var options = {
         title: "Moods Expressed",
         is3D: false,
-        width: 400,
-        height: 300
+        width: 475,
+        height: 350
       };
 
       // Instantiate and draw our chart, passing in some options.
@@ -115,11 +115,12 @@ $(document).ready(function() {
       data.addRows(moodsterLineChart);
       var options = {
         chart: {
+          legend: 'top',
           title: "Mood / Lifestly Correlations",
           subtitle: "by number of checkins"
         },
-        width: 400,
-        height: 300
+        width: 475,
+        height: 350
       };
       var chart = new google.charts.Line(
         document.getElementById("line_chart_div")
