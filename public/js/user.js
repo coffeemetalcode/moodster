@@ -120,6 +120,7 @@ $(document).ready(function() {
         curveType: "function",
         // curveType: "function",
         width: 475,
+
         height: 350
       };
       var chart = new google.charts.Line(

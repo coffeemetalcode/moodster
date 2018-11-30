@@ -1,6 +1,6 @@
 {
   "development": {
-    "username": "david",
+    "username": "root",
     "password": "",
     "database": "moodster_db",
     "host": "localhost",
