@@ -1,3 +1,9 @@
+ $(document).ready(function(){
+    $('#modal').modal();
+    $('#modal').modal('open'); 
+    $('#modal2').modal();
+    $('#modal2').modal('open'); 
+ });
 
 $("#createEntryBtn").on("click", function (event) {
   event.preventDefault();
