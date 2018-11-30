@@ -21,7 +21,7 @@ $("#add-btn").on("click", function(event) {
 
     };
 
-    if (!(newCheckIn.sleep_amount) || newCheckIn.sleep_amount < 0) {
+    if (!newCheckIn.sleep_amount || newCheckIn.sleep_amount < 0) {
         alert("You must enter a sleep duration of 0 hours or more.");
         return;
     }
