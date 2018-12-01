@@ -1,3 +1,4 @@
+
 require('dotenv').config();
 var keys = require('./keys.js');
 // Download the helper library from https://www.twilio.com/docs/node/install
@@ -24,7 +25,7 @@ request({
     var userData = body;
   }
 for(i=0;i<userData.length;i++){
-  userNameArray.push(userData[i].user_name);
+  userNameArray.push(userData[i].person_name);
   phoneNumberArray.push(userData[i].phone_number);
   userIdArray.push(userData[i].id);
 };

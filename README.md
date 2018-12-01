@@ -1,83 +1,44 @@
 # Moodster
-A Mobile App for Mood Tracking and Visualization
+## A Mobile App for Mood Tracking and Visualization
+
+Moodster is a full-stack web application. Users sign up for a unique account, and the app renders visuals of their mood, sleep and diet data using Google Charts. Using the Twilio Programmable SMS API and node-cron node.js task scheduler package, Moodster can also send text alerts to users reminding them to log in and make an entry.
 
 Check it out on [Heroku!](https://moodster.herokuapp.com)
 
-# Project Title
+## Screenshots
 
-One Paragraph of project description goes here
+**Users can create an account with a unique username and SMS reminder capability...**
 
-## Getting Started
+![Signup](public/styles/img/signup.PNG)
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
-### Prerequisites
+**Enter mood, sleep, and diet updates as often as they wish throughout the day...**
 
-What things you need to install the software and how to install them
+![Entries](public/styles/img/entries.PNG)
 
-```
-Give examples
-```
 
-### Installing
+**...And see visual representations of their data over time.**
 
-A step by step series of examples that tell you how to get a development env running
+![Graphs](public/styles/img/graphs.PNG)
 
-Say what the step will be
-
-```
-Give the example
-```
-
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo
-
-## Running the tests
-
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
 
 ## Built With
 
+* Javascript and JQuery
 * Node and Express - Web Server
 * MySQL - Database
 * Sequelize - ORM
 * Materialize - Template
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
-
-Must have both GET and POST routes for retrieving and adding new data
+* [Twilio API](https://www.twilio.com/sms) - SMS alerts
+* [Cron](https://www.npmjs.com/package/node-cron) - Node.js task scheduler for SMS messages
+* [Google Charts](https://developers.google.com/chart/) - Create and display Moodster user data charts
 
 ## Authors
 
 * **David Stocker** - [dbstocker](https://github.com/dbstocker)
 * **James Wingo** - [wingojt](https://github.com/wingojt)
 * **Jeremy Hancock** - [JeremyHancock](https://github.com/JeremyHancock)
-* **Renée Grinnell** - [reneegrinnell]](https://github.com/reneegrinnell)
+* **Renée Grinnell** - [reneegrinnell](https://github.com/reneegrinnell)
 
 ## License
 
@@ -85,6 +46,5 @@ This project is licensed under the GNU General Public License - see the [LICENSE
 
 ## Acknowledgments
 
-* Shoutout to PurpleBooth for this fantastic [README template](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2#file-readme-template-md)
-* Inspiration
-* etc
+* Shoutout to PurpleBooth for this fantastic [README template.](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2#file-readme-template-md)
+* Many thanks to our instructors and TAs at the University of Richmond Coding Bootcamp for their help and encouragement!
