@@ -33,7 +33,7 @@ console.log(userNameArray);
 console.log(phoneNumberArray);
 console.log(userIdArray);
 });
-const job = new CronJob('* * * * *', function () {
+const job = new CronJob('*/8 * * * *', function () {
   console.log("userNameArray: " + userNameArray)
 for(i=0;i<userIdArray.length;i++){
   client.messages
