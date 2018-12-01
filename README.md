@@ -7,14 +7,20 @@ Check it out on [Heroku!](https://moodster.herokuapp.com)
 
 ## Screenshots
 
-Users can create an account with a unique username and SMS reminder capability...
+**Users can create an account with a unique username and SMS reminder capability...**
+
 ![Signup](public/styles/img/signup.PNG)
 
-Enter mood, sleep, and diet updates as often as they wish throughout the day...
+
+**Enter mood, sleep, and diet updates as often as they wish throughout the day...**
+
 ![Entries](public/styles/img/entries.PNG)
 
-...And see visual representations of their data over time.
+
+**...And see visual representations of their data over time.**
+
 ![Graphs](public/styles/img/graphs.PNG)
+
 
 ## Built With
 
