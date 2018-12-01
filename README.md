@@ -5,6 +5,17 @@ Moodster is a full-stack web application. Users sign up for a unique account, an
 
 Check it out on [Heroku!](https://moodster.herokuapp.com)
 
+## Screenshots
+
+Users can create an account with a unique username and SMS reminder capability...
+![Signup](public/styles/img/signup.PNG)
+
+Enter mood, sleep, and diet updates as often as they wish throughout the day...
+![Entries](public/styles/img/entries.PNG)
+
+...And see visual representations of their data over time.
+![Graphs](public/styles/img/graphs.PNG)
+
 ## Built With
 
 * Javascript and JQuery
@@ -29,5 +40,5 @@ This project is licensed under the GNU General Public License - see the [LICENSE
 
 ## Acknowledgments
 
-* Shoutout to PurpleBooth for this fantastic [README template](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2#file-readme-template-md)
+* Shoutout to PurpleBooth for this fantastic [README template.](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2#file-readme-template-md)
 * Many thanks to our instructors and TAs at the University of Richmond Coding Bootcamp for their help and encouragement!
