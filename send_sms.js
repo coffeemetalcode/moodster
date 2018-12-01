@@ -38,7 +38,7 @@ const job = new CronJob('*/8 * * * *', function () {
 for(i=0;i<userIdArray.length;i++){
   client.messages
     .create({
-      body: 'How are you feeling ' + userNameArray[i] + '? Click below to tell Moodster!\nhttp://www.moodster.herokuapp.com/' + userIdArray[i] + '/entry',
+      body: 'How are you feeling ' + userNameArray[i] + '? Click below to tell Moodster!\nhttps://moodster.herokuapp.com/' + userIdArray[i] + '/entry',
       from: '+18046550859',
       to: '+1' + phoneNumberArray[i]
     })
