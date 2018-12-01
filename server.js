@@ -7,7 +7,7 @@ var app = express();
 var PORT = process.env.PORT || 8089;
 
 var db = require("./models");
-var textMessage = require("./send_sms");
+// var textMessage = require("./send_sms");
 // Sets up the Express app to handle data parsing
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
@@ -23,7 +23,7 @@ db.sequelize.sync({}).then(function () {
   app.listen(PORT, function () {
     console.log("App listening on PORT " + PORT);
     console.log('After job instantiation');
-    textMessage.job.start();
+    // textMessage.job.start();
 
   });
 });
