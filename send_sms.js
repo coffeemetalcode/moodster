@@ -8,7 +8,7 @@ const client = require('twilio')(accountSid, authToken);
 var request = require("request")
 var CronJob = require('cron').CronJob;
 
-var url = "https://moodster.herokuapp.com/api/user"
+var url = "http://localhost:8089/api/user"
 var phoneNumberArray = [];
 var userIdArray = [];
 var userNameArray = [];
@@ -23,11 +23,14 @@ request({
     // console.log(body) // Print the json response
     var userData = body;
   }
-for(i=0;i<userData.length-1;i++){
+for(i=0;i<userData.length;i++){
   userNameArray.push(userData[i].user_name);
   phoneNumberArray.push(userData[i].phone_number);
   userIdArray.push(userData[i].id);
 };
+console.log(userNameArray);
+console.log(phoneNumberArray);
+console.log(userIdArray);
 });
 const job = new CronJob('* * * * *', function () {
   console.log("userNameArray: " + userNameArray)
@@ -42,7 +45,7 @@ for(i=0;i<userIdArray.length;i++){
     .done();
   const d = new Date();
   console.log('onTick:', d);
-  console.log(phoneNumberArray);
+  console.log(phoneNumberArray[i]);
   }
 });
 module.exports = {
