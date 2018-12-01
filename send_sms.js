@@ -9,7 +9,7 @@ const client = require('twilio')(accountSid, authToken);
 var request = require("request")
 var CronJob = require('cron').CronJob;
 
-var url = "http://localhost:8089/api/user"
+var url = "https://moodster.herokuapp.com/api/user"
 var phoneNumberArray = [];
 var userIdArray = [];
 var userNameArray = [];
